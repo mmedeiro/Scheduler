@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4BCDBDCD1B1F434800059D6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDCC1B1F434800059D6E /* AppDelegate.swift */; };
+		4BCDBDD01B1F434800059D6E /* Scheduler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDCE1B1F434800059D6E /* Scheduler.xcdatamodeld */; };
+		4BCDBDD21B1F434800059D6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD11B1F434800059D6E /* ViewController.swift */; };
+		4BCDBDD51B1F434800059D6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD31B1F434800059D6E /* Main.storyboard */; };
+		4BCDBDD71B1F434800059D6E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD61B1F434800059D6E /* Images.xcassets */; };
+		4BCDBDDA1B1F434800059D6E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD81B1F434800059D6E /* LaunchScreen.xib */; };
+		4BCDBDE61B1F434800059D6E /* SchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDE51B1F434800059D6E /* SchedulerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BCDBDE01B1F434800059D6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4BCDBDBF1B1F434800059D6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4BCDBDC61B1F434800059D6E;
+			remoteInfo = Scheduler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4BCDBDC71B1F434800059D6E /* Scheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BCDBDCB1B1F434800059D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BCDBDCC1B1F434800059D6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4BCDBDCF1B1F434800059D6E /* Scheduler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scheduler.xcdatamodel; sourceTree = "<group>"; };
+		4BCDBDD11B1F434800059D6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4BCDBDD41B1F434800059D6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4BCDBDD61B1F434800059D6E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4BCDBDD91B1F434800059D6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4BCDBDDF1B1F434800059D6E /* SchedulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchedulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BCDBDE41B1F434800059D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BCDBDE51B1F434800059D6E /* SchedulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4BCDBDC41B1F434800059D6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCDBDDC1B1F434800059D6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BCDBDBE1B1F434800059D6E = {
+			isa = PBXGroup;
+			children = (
+				4BCDBDC91B1F434800059D6E /* Scheduler */,
+				4BCDBDE21B1F434800059D6E /* SchedulerTests */,
+				4BCDBDC81B1F434800059D6E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4BCDBDC81B1F434800059D6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4BCDBDC71B1F434800059D6E /* Scheduler.app */,
+				4BCDBDDF1B1F434800059D6E /* SchedulerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4BCDBDC91B1F434800059D6E /* Scheduler */ = {
+			isa = PBXGroup;
+			children = (
+				4BCDBDCC1B1F434800059D6E /* AppDelegate.swift */,
+				4BCDBDD11B1F434800059D6E /* ViewController.swift */,
+				4BCDBDD31B1F434800059D6E /* Main.storyboard */,
+				4BCDBDD61B1F434800059D6E /* Images.xcassets */,
+				4BCDBDD81B1F434800059D6E /* LaunchScreen.xib */,
+				4BCDBDCE1B1F434800059D6E /* Scheduler.xcdatamodeld */,
+				4BCDBDCA1B1F434800059D6E /* Supporting Files */,
+			);
+			path = Scheduler;
+			sourceTree = "<group>";
+		};
+		4BCDBDCA1B1F434800059D6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BCDBDCB1B1F434800059D6E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BCDBDE21B1F434800059D6E /* SchedulerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4BCDBDE51B1F434800059D6E /* SchedulerTests.swift */,
+				4BCDBDE31B1F434800059D6E /* Supporting Files */,
+			);
+			path = SchedulerTests;
+			sourceTree = "<group>";
+		};
+		4BCDBDE31B1F434800059D6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BCDBDE41B1F434800059D6E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4BCDBDC61B1F434800059D6E /* Scheduler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BCDBDE91B1F434800059D6E /* Build configuration list for PBXNativeTarget "Scheduler" */;
+			buildPhases = (
+				4BCDBDC31B1F434800059D6E /* Sources */,
+				4BCDBDC41B1F434800059D6E /* Frameworks */,
+				4BCDBDC51B1F434800059D6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Scheduler;
+			productName = Scheduler;
+			productReference = 4BCDBDC71B1F434800059D6E /* Scheduler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4BCDBDDE1B1F434800059D6E /* SchedulerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BCDBDEC1B1F434800059D6E /* Build configuration list for PBXNativeTarget "SchedulerTests" */;
+			buildPhases = (
+				4BCDBDDB1B1F434800059D6E /* Sources */,
+				4BCDBDDC1B1F434800059D6E /* Frameworks */,
+				4BCDBDDD1B1F434800059D6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4BCDBDE11B1F434800059D6E /* PBXTargetDependency */,
+			);
+			name = SchedulerTests;
+			productName = SchedulerTests;
+			productReference = 4BCDBDDF1B1F434800059D6E /* SchedulerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4BCDBDBF1B1F434800059D6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Mariana Medeiro";
+				TargetAttributes = {
+					4BCDBDC61B1F434800059D6E = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					4BCDBDDE1B1F434800059D6E = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 4BCDBDC61B1F434800059D6E;
+					};
+				};
+			};
+			buildConfigurationList = 4BCDBDC21B1F434800059D6E /* Build configuration list for PBXProject "Scheduler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4BCDBDBE1B1F434800059D6E;
+			productRefGroup = 4BCDBDC81B1F434800059D6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4BCDBDC61B1F434800059D6E /* Scheduler */,
+				4BCDBDDE1B1F434800059D6E /* SchedulerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4BCDBDC51B1F434800059D6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCDBDD51B1F434800059D6E /* Main.storyboard in Resources */,
+				4BCDBDDA1B1F434800059D6E /* LaunchScreen.xib in Resources */,
+				4BCDBDD71B1F434800059D6E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCDBDDD1B1F434800059D6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4BCDBDC31B1F434800059D6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCDBDD21B1F434800059D6E /* ViewController.swift in Sources */,
+				4BCDBDCD1B1F434800059D6E /* AppDelegate.swift in Sources */,
+				4BCDBDD01B1F434800059D6E /* Scheduler.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BCDBDDB1B1F434800059D6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCDBDE61B1F434800059D6E /* SchedulerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BCDBDE11B1F434800059D6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4BCDBDC61B1F434800059D6E /* Scheduler */;
+			targetProxy = 4BCDBDE01B1F434800059D6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4BCDBDD31B1F434800059D6E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BCDBDD41B1F434800059D6E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4BCDBDD81B1F434800059D6E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BCDBDD91B1F434800059D6E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4BCDBDE71B1F434800059D6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4BCDBDE81B1F434800059D6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4BCDBDEA1B1F434800059D6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Scheduler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4BCDBDEB1B1F434800059D6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Scheduler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4BCDBDED1B1F434800059D6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SchedulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scheduler.app/Scheduler";
+			};
+			name = Debug;
+		};
+		4BCDBDEE1B1F434800059D6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SchedulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Scheduler.app/Scheduler";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4BCDBDC21B1F434800059D6E /* Build configuration list for PBXProject "Scheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCDBDE71B1F434800059D6E /* Debug */,
+				4BCDBDE81B1F434800059D6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4BCDBDE91B1F434800059D6E /* Build configuration list for PBXNativeTarget "Scheduler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCDBDEA1B1F434800059D6E /* Debug */,
+				4BCDBDEB1B1F434800059D6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4BCDBDEC1B1F434800059D6E /* Build configuration list for PBXNativeTarget "SchedulerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCDBDED1B1F434800059D6E /* Debug */,
+				4BCDBDEE1B1F434800059D6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4BCDBDCE1B1F434800059D6E /* Scheduler.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4BCDBDCF1B1F434800059D6E /* Scheduler.xcdatamodel */,
+			);
+			currentVersion = 4BCDBDCF1B1F434800059D6E /* Scheduler.xcdatamodel */;
+			path = Scheduler.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4BCDBDBF1B1F434800059D6E /* Project object */;
+}
