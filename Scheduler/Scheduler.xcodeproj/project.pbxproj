@@ -14,6 +14,8 @@
 		4BCDBDD71B1F434800059D6E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD61B1F434800059D6E /* Images.xcassets */; };
 		4BCDBDDA1B1F434800059D6E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BCDBDD81B1F434800059D6E /* LaunchScreen.xib */; };
 		4BCDBDE61B1F434800059D6E /* SchedulerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDE51B1F434800059D6E /* SchedulerTests.swift */; };
+		4BCDBDF31B1F475000059D6E /* Aluno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDF11B1F475000059D6E /* Aluno.swift */; };
+		4BCDBDF41B1F475000059D6E /* Avaliacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCDBDF21B1F475000059D6E /* Avaliacao.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		4BCDBDDF1B1F434800059D6E /* SchedulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SchedulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCDBDE41B1F434800059D6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BCDBDE51B1F434800059D6E /* SchedulerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerTests.swift; sourceTree = "<group>"; };
+		4BCDBDF11B1F475000059D6E /* Aluno.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Aluno.swift; sourceTree = "<group>"; };
+		4BCDBDF21B1F475000059D6E /* Avaliacao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avaliacao.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 			children = (
 				4BCDBDCC1B1F434800059D6E /* AppDelegate.swift */,
 				4BCDBDD11B1F434800059D6E /* ViewController.swift */,
+				4BCDBDF11B1F475000059D6E /* Aluno.swift */,
+				4BCDBDF21B1F475000059D6E /* Avaliacao.swift */,
 				4BCDBDD31B1F434800059D6E /* Main.storyboard */,
 				4BCDBDD61B1F434800059D6E /* Images.xcassets */,
 				4BCDBDD81B1F434800059D6E /* LaunchScreen.xib */,
@@ -216,6 +222,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BCDBDD21B1F434800059D6E /* ViewController.swift in Sources */,
+				4BCDBDF31B1F475000059D6E /* Aluno.swift in Sources */,
+				4BCDBDF41B1F475000059D6E /* Avaliacao.swift in Sources */,
 				4BCDBDCD1B1F434800059D6E /* AppDelegate.swift in Sources */,
 				4BCDBDD01B1F434800059D6E /* Scheduler.xcdatamodeld in Sources */,
 			);
