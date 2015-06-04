@@ -11,9 +11,11 @@ import UIKit
 class SearchResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol {
     
     let kCellIdentifier: String = "SearchResultCell"
-    let api = APIController()
-    var dadosTableView = []
+    var api : APIController!
+    var albums = [Album] ()
     var imageCache = [String: UIImage]()
+    
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -21,9 +23,9 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        api.delegate = self
-        
-        api.searchItunesFor("Angry Birds")
+        api = APIController(delegate: self)
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        api.searchItunesFor("Beatles")
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,46 +34,45 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dadosTableView.count
+        return albums.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as! UITableViewCell
+        let album = self.albums[indexPath.row]
         
-        if let rowData: NSDictionary = self.dadosTableView[indexPath.row] as? NSDictionary,
-            urlString = rowData["artworkUrl60"] as? String,
-            imgURL = NSURL(string: urlString),
-            formatedPrice = rowData["formattedPrice"] as? String,
-            trackName = rowData["trackName"] as? String {
-                cell.detailTextLabel?.text = formatedPrice
-                cell.textLabel?.text = trackName
-                cell.imageView?.image = UIImage(named: "Blank52")
-                
-                if let img = imageCache[urlString] {
-                    cell.imageView?.image = img
-                }
-                else {
-                    let request: NSURLRequest = NSURLRequest(URL: imgURL)
-                    let mainQueue = NSOperationQueue.mainQueue()
-                    NSURLConnection.sendAsynchronousRequest(request, queue: mainQueue, completionHandler: { (response, data, error) -> Void in
-                        if error == nil {
-                            let image = UIImage(data: data)
-                            self.imageCache[urlString] = image
-                            
-                            dispatch_async(dispatch_get_main_queue(), {
-                                if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
-                                    cellToUpdate.imageView?.image = image
-                                }
-                            })
-                        }
-                        else {
-                            println("Error: \(error.localizedDescription)")
+        cell.detailTextLabel?.text = album.price
+
+        cell.textLabel?.text = album.title
+        
+        cell.imageView?.image = UIImage(named: "Blank52")
+        
+        let thumbnailURLString = album.thumbnailImageURL
+        let thumbnailURL = NSURL(string: thumbnailURLString)!
+        
+        if let img = imageCache[thumbnailURLString] {
+            cell.imageView?.image = img
+        }
+        else {
+            let request: NSURLRequest = NSURLRequest(URL: thumbnailURL)
+            let mainQueue = NSOperationQueue.mainQueue()
+            NSURLConnection.sendAsynchronousRequest(request, queue: mainQueue, completionHandler: { (response, data, error) -> Void in
+                if error == nil {
+                    
+                    let image = UIImage(data: data)
+                    
+                    self.imageCache[thumbnailURLString] = image
+                    dispatch_async(dispatch_get_main_queue(), {
+                        if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
+                            cellToUpdate.imageView?.image = image
                         }
                     })
                 }
+                else {
+                    println("Error: \(error.localizedDescription)")
+                }
+            })
         }
-        
         return cell
     }
     
@@ -102,7 +103,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
                     
                     if let results: NSArray = jsonResult["results"] as? NSArray {
                         dispatch_async(dispatch_get_main_queue(), {
-                            self.dadosTableView = results
+                            self.albums = Album.albumsWithJSON(results)
                             self.tableView!.reloadData()
                         })
                     }
@@ -115,20 +116,43 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
     
     func didReceiveAPIResults(results: NSArray) {
         dispatch_async(dispatch_get_main_queue(), {
-            self.dadosTableView = results
+            self.albums = Album.albumsWithJSON(results)
             self.tableView!.reloadData()
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         })
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let rowData = self.dadosTableView[indexPath.row] as? NSDictionary,
-            name = rowData["trackName"] as? String,
-            formatedPrice = rowData["formattedPrice"] as? String {
-                let alert = UIAlertController(title: name, message: formatedPrice, preferredStyle: .Alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        if let rowData = self.albums[indexPath.row] {
+//            name = rowData["trackName"] as? String,
+//            formatedPrice = rowData["formattedPrice"] as? String {
+//                let alert = UIAlertController(title: name, message: formatedPrice, preferredStyle: .Alert)
+//                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+//                self.presentViewController(alert, animated: true, completion: nil)
+//        }
+//    }
+    
+        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+            // Get the row data for the selected row
+            if let rowData = self.albums[indexPath.row] as? NSDictionary,
+                // Get the name of the track for this row
+                name = rowData["trackName"] as? String,
+                // Get the price of the track on this row
+                formattedPrice = rowData["formattedPrice"] as? String {
+                    let alert = UIAlertController(title: name, message: formattedPrice, preferredStyle: .Alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                    self.presentViewController(alert, animated: true, completion: nil)
+            }
+        }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let detailsViewController: DetailsViewController = segue.destinationViewController as? DetailsViewController {
+            var albumIndex = tableView!.indexPathForSelectedRow()!.row
+            var selectedAlbum = self.albums[albumIndex]
+            detailsViewController.album = selectedAlbum
         }
     }
     
 }
+
 

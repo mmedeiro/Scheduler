@@ -15,6 +15,8 @@
 		4BD6239F1B1FCEDE0027204D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BD6239D1B1FCEDE0027204D /* LaunchScreen.xib */; };
 		4BD623AB1B1FCEDE0027204D /* Swift_BeginnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD623AA1B1FCEDE0027204D /* Swift_BeginnerTests.swift */; };
 		4BD623B51B1FE9830027204D /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD623B41B1FE9830027204D /* APIController.swift */; };
+		4BD623B71B20FE0B0027204D /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD623B61B20FE0B0027204D /* Album.swift */; };
+		4BD623B91B2104AF0027204D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD623B81B2104AF0027204D /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		4BD623A91B1FCEDE0027204D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BD623AA1B1FCEDE0027204D /* Swift_BeginnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_BeginnerTests.swift; sourceTree = "<group>"; };
 		4BD623B41B1FE9830027204D /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		4BD623B61B20FE0B0027204D /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		4BD623B81B2104AF0027204D /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +87,10 @@
 			children = (
 				4BD623911B1FCEDE0027204D /* AppDelegate.swift */,
 				4BD623961B1FCEDE0027204D /* SearchResultsViewController.swift */,
+				4BD623B81B2104AF0027204D /* DetailsViewController.swift */,
 				4BD623981B1FCEDE0027204D /* Main.storyboard */,
 				4BD623B41B1FE9830027204D /* APIController.swift */,
+				4BD623B61B20FE0B0027204D /* Album.swift */,
 				4BD6239B1B1FCEDE0027204D /* Images.xcassets */,
 				4BD6239D1B1FCEDE0027204D /* LaunchScreen.xib */,
 				4BD623931B1FCEDE0027204D /* Swift_Beginner.xcdatamodeld */,
@@ -222,6 +228,8 @@
 				4BD623971B1FCEDE0027204D /* SearchResultsViewController.swift in Sources */,
 				4BD623921B1FCEDE0027204D /* AppDelegate.swift in Sources */,
 				4BD623951B1FCEDE0027204D /* Swift_Beginner.xcdatamodeld in Sources */,
+				4BD623B71B20FE0B0027204D /* Album.swift in Sources */,
+				4BD623B91B2104AF0027204D /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
