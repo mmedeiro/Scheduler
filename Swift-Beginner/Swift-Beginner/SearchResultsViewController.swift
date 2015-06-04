@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SearchResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol {
     
+    let api = APIController()
     var dadosTableView = []
     
     @IBOutlet weak var tableView: UITableView!
@@ -18,7 +19,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        searchItunesFor("JQ")
+        api.delegate = self
+        
+        api.searchItunesFor("Angry Birds")
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,7 +89,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
       
     }
-
-
+    
+    func didReceiveAPIResults(results: NSArray) {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.dadosTableView = results
+            self.tableView!.reloadData()
+        })
+    }
+    
 }
 
