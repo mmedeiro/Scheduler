@@ -10,6 +10,7 @@ import UIKit
 
 class SearchResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol {
     
+    let kCellIdentifier: String = "SearchResultCell"
     let api = APIController()
     var dadosTableView = []
     
@@ -35,7 +36,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "CellTeste")
+        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as! UITableViewCell
         
         if let rowData: NSDictionary = self.dadosTableView[indexPath.row] as? NSDictionary,
             urlString = rowData["artworkUrl60"] as? String,
@@ -95,6 +96,16 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
             self.dadosTableView = results
             self.tableView!.reloadData()
         })
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let rowData = self.dadosTableView[indexPath.row] as? NSDictionary,
+        name = rowData["trackName"] as? String,
+            formatedPrice = rowData["formattedPrice"] as? String {
+                let alert = UIAlertController(title: name, message: formatedPrice, preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
 }
